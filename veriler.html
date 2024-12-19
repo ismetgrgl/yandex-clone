@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Başarılı</title>
+</head>
+<body>
+  <h1>Giriş Bilgileri</h1>
+  <p id="emailDisplay"></p>
+  <p id="codeDisplay"></p>
+
+  <script>
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    const code = urlParams.get('code');
+
+    document.getElementById('emailDisplay').textContent = `Email: ${email}`;
+    document.getElementById('codeDisplay').textContent = `Code: ${code}`;
+  </script>
+</body>
+</html>
